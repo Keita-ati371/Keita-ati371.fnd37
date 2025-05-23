@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  <h1>改善工数計算ツール</h1>
+  ① <input type="number" id = "task"> <label id="forTask" for="task">１回の工数</label>
+  　<select name="time" id="time">
+      <option value="h">h</option>
+      <option value="m">m</option>
+      <option value="s">s</option>
+  </select>
+  <p></p>
+  ② <input type="number" id="frequency">  <label id="forFrequency" for="frequency">回数</label>
+  <p></p>
+  ③ <input type="number" id="work">  <label id="forWork" for="work">作業数</label>
+  <p></p>
+  ④ <input type="number" id="pjt">  <label id="forPjt" for="pjt">PJT数</label>
+  　<select name="unit" id="unit">
+      <option value="default">変更したい単位を選択</option>
+      <option value="2">②</option>
+      <option value="3">③</option>
+      <option value="4">④</option>
+      <option value="5">⑤</option>
+  </select>
+  <p></p>
+  ⑤ <input type="number" id="other"> <label id="forOther" for="other">予備の入力</label>
+  　<input type="text" id="changeUnit"> <button id="changeBtn">変更</button>
+  <div>
+    <p></p>
+    <button id = "btnBefore">　改善前計算　</button>　<button id = "btnAfter">　改善後計算　</button>
+    <p></p>
+    <p id="resultBefore">ここに式と結果を表示</p>
+    <p></p>
+    <p id="resultAfter"></p>
+    <p></p>
+    <p id="result"></p>
+  </div>
+  <script src=script.js></script>
+</body>
+</html>
