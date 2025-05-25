@@ -81,7 +81,7 @@ function calculateHoursBefore() {
       stringsArr.push(arrays[i]);
     }
   }
-  monthHourBefore = monthHourBefore / 12
+  monthHourBefore = Math.round(monthHourBefore / 12 * 100) / 100;
   stringsArr.push("年 ÷ 12カ月 = ", monthHourBefore, workTimeStr, "/月")
   const str = stringsArr.join()
   const arr = str.split(",")
@@ -95,6 +95,15 @@ function calculateHoursBefore() {
     document.getElementById("resultBefore").innerText = strings;
     if (monthHourBefore > 0 && monthHourAfter > 0) {
       document.getElementById("result").innerText = ["改善前：", monthHourBefore, workTimeStr, "/月 - 改善後：", monthHourAfter, workTimeStr, "/月 = ", monthHourBefore - monthHourAfter, workTimeStr, "/月の工数低減"].join("");
+      if (monthHourBefore - monthHourAfter >= 20) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：３";
+      } else if (monthHourBefore - monthHourAfter >= 10) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：２";
+      } else if (monthHourBefore - monthHourAfter >= 2) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：１";
+      } else {
+        document.getElementById("resultPoint").innerText = "結果ポイント：０";
+      }
     }
   }
 }
@@ -116,7 +125,7 @@ function calculateHoursAfter() {
       stringsArr.push(arrays[i]);
     }
   }
-  monthHourAfter = monthHourAfter / 12
+  monthHourAfter = Math.round(monthHourAfter / 12 * 100) / 100;
   stringsArr.push("年 ÷ 12カ月 = ", monthHourAfter, workTimeStr, "/月")
   const str = stringsArr.join()
   const arr = str.split(",")
@@ -126,10 +135,19 @@ function calculateHoursAfter() {
   } else if (workTime == 0) {
     document.getElementById("resultAfter").innerText = "工数を入力してください。";
   } else {
-    document.getElementById("btnAfter").innerText = " 改善前再計算 "
+    document.getElementById("btnAfter").innerText = " 改善後再計算 "
     document.getElementById("resultAfter").innerText = strings;
     if (monthHourBefore > 0 && monthHourAfter > 0) {
       document.getElementById("result").innerText = ["改善前：", monthHourBefore, workTimeStr, "/月 - 改善後：", monthHourAfter, workTimeStr, "/月 = ", monthHourBefore - monthHourAfter, workTimeStr, "/月の工数低減"].join("");
+      if (monthHourBefore - monthHourAfter >= 20) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：３";
+      } else if (monthHourBefore - monthHourAfter >= 10) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：２";
+      } else if (monthHourBefore - monthHourAfter >= 2) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：１";
+      } else {
+        document.getElementById("resultPoint").innerText = "結果ポイント：０";
+      }
     }
   }
 }
