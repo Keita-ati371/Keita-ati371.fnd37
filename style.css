@@ -11,14 +11,50 @@
     width: 50px;
 }
 
+#position1 {
+    position: relative;
+}
+
 #pjt {
     width: 50px;
+}
+
+#position2 {
+    position: relative;
 }
 
 #other {
     width: 50px;
 }
 
+#unit {
+    position: absolute;
+    bottom: 0;
+    left: 190px;
+}
+
 #changeUnit {
     width: 70px;
+    position: absolute;
+    bottom: 0;
+    left: 190px;
+}
+
+#changeBtn {
+    position: absolute;
+    bottom: 0;
+    left: 275px;
+}
+
+#position3 {
+    position: relative;
+    top: 10px;
+}
+
+#btnBefore {
+    width: 100px;
+}
+
+#btnAfter {
+    width: 100px;
 }
