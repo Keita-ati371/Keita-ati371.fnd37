@@ -19,26 +19,33 @@
   <p></p>
   ③ <input type="number" id="work">  <label id="forWork" for="work">作業数</label>
   <p></p>
-  ④ <input type="number" id="pjt">  <label id="forPjt" for="pjt">PJT数</label>
+  <div id="position1">
+    ④ <input type="number" id="pjt">  <label id="forPjt" for="pjt">PJT数</label>
   　<select name="unit" id="unit">
       <option value="default">変更したい単位を選択</option>
       <option value="2">②</option>
       <option value="3">③</option>
       <option value="4">④</option>
       <option value="5">⑤</option>
-  </select>
+     </select>
+  </div>
+  <div id="position2">
   <p></p>
   ⑤ <input type="number" id="other"> <label id="forOther" for="other">予備の入力</label>
   　<input type="text" id="changeUnit"> <button id="changeBtn">変更</button>
-  <div>
+  </div>
+  <div id="position3">
     <p></p>
-    <button id = "btnBefore">　改善前計算　</button>　<button id = "btnAfter">　改善後計算　</button>
+    <button id = "btnBefore">改善前計算</button>　　<button id = "btnAfter">改善後計算</button>
     <p></p>
     <p id="resultBefore">ここに式と結果を表示</p>
     <p></p>
     <p id="resultAfter"></p>
     <p></p>
     <p id="result"></p>
+    <p></p>
+    <p></p>
+    <p id="resultPoint"></p>
   </div>
   <script src=script.js></script>
 </body>
