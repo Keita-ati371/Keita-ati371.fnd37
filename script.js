@@ -95,7 +95,11 @@ function calculateHoursBefore() {
     document.getElementById("resultBefore").innerText = strings;
     if (monthHourBefore > 0 && monthHourAfter > 0) {
       document.getElementById("result").innerText = ["改善前：", monthHourBefore, workTimeStr, "/月 - 改善後：", monthHourAfter, workTimeStr, "/月 = ", monthHourBefore - monthHourAfter, workTimeStr, "/月の工数低減"].join("");
-      if (monthHourBefore - monthHourAfter >= 20) {
+       if (monthHourBefore - monthHourAfter >= 80) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：５";
+      } else if (monthHourBefore - monthHourAfter >= 40) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：４";
+      } else if (monthHourBefore - monthHourAfter >= 20) {
         document.getElementById("resultPoint").innerText = "結果ポイント：３";
       } else if (monthHourBefore - monthHourAfter >= 10) {
         document.getElementById("resultPoint").innerText = "結果ポイント：２";
@@ -139,7 +143,11 @@ function calculateHoursAfter() {
     document.getElementById("resultAfter").innerText = strings;
     if (monthHourBefore > 0 && monthHourAfter > 0) {
       document.getElementById("result").innerText = ["改善前：", monthHourBefore, workTimeStr, "/月 - 改善後：", monthHourAfter, workTimeStr, "/月 = ", monthHourBefore - monthHourAfter, workTimeStr, "/月の工数低減"].join("");
-      if (monthHourBefore - monthHourAfter >= 20) {
+      if (monthHourBefore - monthHourAfter >= 80) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：５";
+      } else if (monthHourBefore - monthHourAfter >= 40) {
+        document.getElementById("resultPoint").innerText = "結果ポイント：４";
+      } else if (monthHourBefore - monthHourAfter >= 20) {
         document.getElementById("resultPoint").innerText = "結果ポイント：３";
       } else if (monthHourBefore - monthHourAfter >= 10) {
         document.getElementById("resultPoint").innerText = "結果ポイント：２";
