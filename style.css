@@ -53,8 +53,10 @@
 
 #btnBefore {
     width: 100px;
+    background-color: orangered;
 }
 
 #btnAfter {
     width: 100px;
+    background-color: dodgerblue;
 }
