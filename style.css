@@ -53,10 +53,10 @@
 
 #btnBefore {
     width: 100px;
-    background-color: orangered;
+    background-color: rgb(254, 176, 146);
 }
 
 #btnAfter {
     width: 100px;
-    background-color: dodgerblue;
+    background-color: rgb(117, 186, 255);
 }
